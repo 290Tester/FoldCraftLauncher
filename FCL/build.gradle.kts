@@ -26,20 +26,23 @@ android {
     if (localProperty != null && localProperty.getProperty("arch", "all") == "arm64")
         System.setProperty("arch", "arm64")
 
-    signingConfigs {
+            signingConfigs {
         create("FCLKey") {
-            storeFile = file("../key-store.jks")
-            storePassword = pwd
-            keyAlias = "FCL-Key"
-            keyPassword = pwd
+            storeFile = file("../TianLuo.jks")
+            storePassword = "wxh369291."
+            keyAlias = "TianLuo"
+            keyPassword = "wxh369291."
         }
+        
         create("FCLDebugKey") {
-            storeFile = file("../debug-key.jks")
-            storePassword = "FCL-Debug"
-            keyAlias = "FCL-Debug"
-            keyPassword = "FCL-Debug"
+            storeFile = file("../TianLuo.jks")
+            storePassword = "wxh369291."
+            keyAlias = "TianLuo"
+            keyPassword = "wxh369291."
+
         }
     }
+
 
     defaultConfig {
         applicationId = "com.tungsten.fcl"
