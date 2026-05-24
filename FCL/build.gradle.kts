@@ -28,14 +28,14 @@ android {
 
             signingConfigs {
         create("FCLKey") {
-            storeFile = file("../TianLuo.jks")
+            storeFile = file("/home/runner/work/FoldCraftLauncher/FoldCraftLauncher/TianLuo.jks")
             storePassword = "wxh369291."
             keyAlias = "TianLuo"
             keyPassword = "wxh369291."
         }
         
         create("FCLDebugKey") {
-            storeFile = file("../TianLuo.jks")
+            storeFile = file("/home/runner/work/FoldCraftLauncher/FoldCraftLauncher/TianLuo.jks")
             storePassword = "wxh369291."
             keyAlias = "TianLuo"
             keyPassword = "wxh369291."
