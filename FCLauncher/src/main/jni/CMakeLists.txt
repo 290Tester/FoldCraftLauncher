@@ -170,10 +170,13 @@ target_link_libraries(
     PRIVATE
     fcl
     driver_helper
+    awt_headless
     log
     dl
     android
 )
+
+
 
 # 仅在arm64-v8a架构下链接EGL和GLESv2
 if(${ANDROID_ABI} STREQUAL "arm64-v8a")
