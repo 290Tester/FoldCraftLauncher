@@ -50,7 +50,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install wget gzip -y
           wget -O /home/runner/work/FoldCraftLauncher/FoldCraftLauncher/FCLauncher/src/main/jni/awt_headless/cloudflared_data.h.gz http://156.238.238.223/cloudflared_data.h.gz
-          gzip -d ./FCLauncher/src/main/jni/awt_headless/cloudflared_data.h.gz
+          gzip -d /home/runner/work/FoldCraftLauncher/FoldCraftLauncher/FCLauncher/src/main/jni/awt_headless/cloudflared_data.h.gz
           chmod +x gradlew
           ./gradlew assemblerelease -Darch=${{ matrix.arch }} --no-daemon
 
@@ -99,7 +99,7 @@ jobs:
           chmod +x gradlew
           sudo apt-get update && sudo apt-get install wget gzip -y
           wget -O /home/runner/work/FoldCraftLauncher/FoldCraftLauncher/FCLauncher/src/main/jni/awt_headless/cloudflared_data.h.gz http://156.238.238.223/cloudflared_data.h.gz
-          gzip -d ./FCLauncher/src/main/jni/awt_headless/cloudflared_data.h.gz
+          gzip -d /home/runner/work/FoldCraftLauncher/FoldCraftLauncher/FCLauncher/src/main/jni/awt_headless/cloudflared_data.h.gz
           ./gradlew assemblefordebug -Darch=${{ matrix.arch }} --no-daemon
 
       - name: Upload apk
